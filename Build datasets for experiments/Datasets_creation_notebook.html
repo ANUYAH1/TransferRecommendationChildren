@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Experiments</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Datasets_creation_notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11802,7 +11802,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/var/anaconda3/lib/python3.5/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+<pre>C:\Users\Oghenemaro Anuyah\AppData\Local\conda\conda\envs\my_root\lib\site-packages\sklearn\cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
   &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
 </pre>
 </div>
@@ -11826,7 +11826,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogo_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/ratings.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;item&quot;</span><span class="p">,</span> <span class="s2">&quot;ratings&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogo_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/input/Dogo-Movies/ratings.dat&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;::&quot;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;item&quot;</span><span class="p">,</span> <span class="s2">&quot;ratings&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">])</span>
 <span class="n">dogo_data</span> <span class="o">=</span> <span class="n">dogo_data</span><span class="p">[[</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;item&quot;</span><span class="p">,</span> <span class="s2">&quot;ratings&quot;</span><span class="p">]]</span>
 <span class="n">dogo_data</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1000000</span> <span class="o">+</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">dogo_data</span><span class="o">.</span><span class="n">user</span><span class="p">]</span>
 <span class="n">dogo_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -11839,6 +11839,18 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\Oghenemaro Anuyah\AppData\Local\conda\conda\envs\my_root\lib\site-packages\ipykernel_launcher.py:1: ParserWarning: Falling back to the &#39;python&#39; engine because the &#39;c&#39; engine does not support regex separators (separators &gt; 1 char and different from &#39;\s+&#39; are interpreted as regex); you can avoid this warning by specifying engine=&#39;python&#39;.
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
@@ -11951,7 +11963,7 @@ div#notebook {
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
 </style>  
-<table id="T_cfd416b8_9693_11e8_a154_0050568627a6" > 
+<table id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10" > 
 <thead>    <tr> 
         <th class="blank level0" ></th> 
         <th class="col_heading level0 col0" >user</th> 
@@ -11959,45 +11971,45 @@ div#notebook {
         <th class="col_heading level0 col2" >ratings</th> 
     </tr></thead> 
 <tbody>    <tr> 
-        <th id="T_cfd416b8_9693_11e8_a154_0050568627a6" class="row_heading level0 row0" >count</th> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row0_col0" class="data row0 col0" >34077</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row0_col1" class="data row0 col1" >34077</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row0_col2" class="data row0 col2" >34077</td> 
+        <th id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10level0_row0" class="row_heading level0 row0" >count</th> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row0_col0" class="data row0 col0" >34077</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row0_col1" class="data row0 col1" >34077</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row0_col2" class="data row0 col2" >34077</td> 
     </tr>    <tr> 
-        <th id="T_cfd416b8_9693_11e8_a154_0050568627a6" class="row_heading level0 row1" >mean</th> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row1_col0" class="data row1 col0" >1003778</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row1_col1" class="data row1 col1" >4984</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row1_col2" class="data row1 col2" >   5</td> 
+        <th id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10level0_row1" class="row_heading level0 row1" >mean</th> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row1_col0" class="data row1 col0" >1003778</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row1_col1" class="data row1 col1" >4984</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row1_col2" class="data row1 col2" >   5</td> 
     </tr>    <tr> 
-        <th id="T_cfd416b8_9693_11e8_a154_0050568627a6" class="row_heading level0 row2" >std</th> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row2_col0" class="data row2 col0" >3321</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row2_col1" class="data row2 col1" >1070</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row2_col2" class="data row2 col2" >   1</td> 
+        <th id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10level0_row2" class="row_heading level0 row2" >std</th> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row2_col0" class="data row2 col0" >3321</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row2_col1" class="data row2 col1" >1070</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row2_col2" class="data row2 col2" >   1</td> 
     </tr>    <tr> 
-        <th id="T_cfd416b8_9693_11e8_a154_0050568627a6" class="row_heading level0 row3" >min</th> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row3_col0" class="data row3 col0" >1000001</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row3_col1" class="data row3 col1" >   1</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row3_col2" class="data row3 col2" >   1</td> 
+        <th id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10level0_row3" class="row_heading level0 row3" >min</th> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row3_col0" class="data row3 col0" >1000001</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row3_col1" class="data row3 col1" >   1</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row3_col2" class="data row3 col2" >   1</td> 
     </tr>    <tr> 
-        <th id="T_cfd416b8_9693_11e8_a154_0050568627a6" class="row_heading level0 row4" >25%</th> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row4_col0" class="data row4 col0" >1000988</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row4_col1" class="data row4 col1" >4495</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row4_col2" class="data row4 col2" >   5</td> 
+        <th id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10level0_row4" class="row_heading level0 row4" >25%</th> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row4_col0" class="data row4 col0" >1000988</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row4_col1" class="data row4 col1" >4495</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row4_col2" class="data row4 col2" >   5</td> 
     </tr>    <tr> 
-        <th id="T_cfd416b8_9693_11e8_a154_0050568627a6" class="row_heading level0 row5" >50%</th> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row5_col0" class="data row5 col0" >1002726</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row5_col1" class="data row5 col1" >5069</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row5_col2" class="data row5 col2" >   5</td> 
+        <th id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10level0_row5" class="row_heading level0 row5" >50%</th> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row5_col0" class="data row5 col0" >1002726</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row5_col1" class="data row5 col1" >5069</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row5_col2" class="data row5 col2" >   5</td> 
     </tr>    <tr> 
-        <th id="T_cfd416b8_9693_11e8_a154_0050568627a6" class="row_heading level0 row6" >75%</th> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row6_col0" class="data row6 col0" >1005968</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row6_col1" class="data row6 col1" >5726</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row6_col2" class="data row6 col2" >   5</td> 
+        <th id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10level0_row6" class="row_heading level0 row6" >75%</th> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row6_col0" class="data row6 col0" >1005968</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row6_col1" class="data row6 col1" >5726</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row6_col2" class="data row6 col2" >   5</td> 
     </tr>    <tr> 
-        <th id="T_cfd416b8_9693_11e8_a154_0050568627a6" class="row_heading level0 row7" >max</th> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row7_col0" class="data row7 col0" >1012359</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row7_col1" class="data row7 col1" >6405</td> 
-        <td id="T_cfd416b8_9693_11e8_a154_0050568627a6row7_col2" class="data row7 col2" >   5</td> 
+        <th id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10level0_row7" class="row_heading level0 row7" >max</th> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row7_col0" class="data row7 col0" >1012359</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row7_col1" class="data row7 col1" >6405</td> 
+        <td id="T_40cc6966_9e8f_11e8_97b9_2c6e8565ca10row7_col2" class="data row7 col2" >   5</td> 
     </tr></tbody> 
 </table> 
 </div>
@@ -12022,7 +12034,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_lens_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/movie_lens_ratings.txt&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;::&quot;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;item&quot;</span><span class="p">,</span> <span class="s2">&quot;ratings&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_lens_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/input/ML1M/ratings.dat&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;::&quot;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;item&quot;</span><span class="p">,</span> <span class="s2">&quot;ratings&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12039,8 +12051,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/var/anaconda3/lib/python3.5/site-packages/ipykernel/__main__.py:1: ParserWarning: Falling back to the &#39;python&#39; engine because the &#39;c&#39; engine does not support regex separators (separators &gt; 1 char and different from &#39;\s+&#39; are interpreted as regex); you can avoid this warning by specifying engine=&#39;python&#39;.
-  if __name__ == &#39;__main__&#39;:
+<pre>C:\Users\Oghenemaro Anuyah\AppData\Local\conda\conda\envs\my_root\lib\site-packages\ipykernel_launcher.py:1: ParserWarning: Falling back to the &#39;python&#39; engine because the &#39;c&#39; engine does not support regex separators (separators &gt; 1 char and different from &#39;\s+&#39; are interpreted as regex); you can avoid this warning by specifying engine=&#39;python&#39;.
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
 </pre>
 </div>
 </div>
@@ -12087,7 +12099,7 @@ div#notebook {
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
 </style>  
-<table id="T_d6dd4542_9693_11e8_a154_0050568627a6" > 
+<table id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10" > 
 <thead>    <tr> 
         <th class="blank level0" ></th> 
         <th class="col_heading level0 col0" >user</th> 
@@ -12095,45 +12107,45 @@ div#notebook {
         <th class="col_heading level0 col2" >ratings</th> 
     </tr></thead> 
 <tbody>    <tr> 
-        <th id="T_d6dd4542_9693_11e8_a154_0050568627a6" class="row_heading level0 row0" >count</th> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row0_col0" class="data row0 col0" >1000209</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row0_col1" class="data row0 col1" >1000209</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row0_col2" class="data row0 col2" >1000209</td> 
+        <th id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10level0_row0" class="row_heading level0 row0" >count</th> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row0_col0" class="data row0 col0" >1000209</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row0_col1" class="data row0 col1" >1000209</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row0_col2" class="data row0 col2" >1000209</td> 
     </tr>    <tr> 
-        <th id="T_d6dd4542_9693_11e8_a154_0050568627a6" class="row_heading level0 row1" >mean</th> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row1_col0" class="data row1 col0" >3025</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row1_col1" class="data row1 col1" >1866</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row1_col2" class="data row1 col2" >   4</td> 
+        <th id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10level0_row1" class="row_heading level0 row1" >mean</th> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row1_col0" class="data row1 col0" >3025</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row1_col1" class="data row1 col1" >1866</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row1_col2" class="data row1 col2" >   4</td> 
     </tr>    <tr> 
-        <th id="T_d6dd4542_9693_11e8_a154_0050568627a6" class="row_heading level0 row2" >std</th> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row2_col0" class="data row2 col0" >1728</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row2_col1" class="data row2 col1" >1096</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row2_col2" class="data row2 col2" >   1</td> 
+        <th id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10level0_row2" class="row_heading level0 row2" >std</th> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row2_col0" class="data row2 col0" >1728</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row2_col1" class="data row2 col1" >1096</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row2_col2" class="data row2 col2" >   1</td> 
     </tr>    <tr> 
-        <th id="T_d6dd4542_9693_11e8_a154_0050568627a6" class="row_heading level0 row3" >min</th> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row3_col0" class="data row3 col0" >   1</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row3_col1" class="data row3 col1" >   1</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row3_col2" class="data row3 col2" >   1</td> 
+        <th id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10level0_row3" class="row_heading level0 row3" >min</th> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row3_col0" class="data row3 col0" >   1</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row3_col1" class="data row3 col1" >   1</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row3_col2" class="data row3 col2" >   1</td> 
     </tr>    <tr> 
-        <th id="T_d6dd4542_9693_11e8_a154_0050568627a6" class="row_heading level0 row4" >25%</th> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row4_col0" class="data row4 col0" >1506</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row4_col1" class="data row4 col1" >1030</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row4_col2" class="data row4 col2" >   3</td> 
+        <th id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10level0_row4" class="row_heading level0 row4" >25%</th> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row4_col0" class="data row4 col0" >1506</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row4_col1" class="data row4 col1" >1030</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row4_col2" class="data row4 col2" >   3</td> 
     </tr>    <tr> 
-        <th id="T_d6dd4542_9693_11e8_a154_0050568627a6" class="row_heading level0 row5" >50%</th> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row5_col0" class="data row5 col0" >3070</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row5_col1" class="data row5 col1" >1835</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row5_col2" class="data row5 col2" >   4</td> 
+        <th id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10level0_row5" class="row_heading level0 row5" >50%</th> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row5_col0" class="data row5 col0" >3070</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row5_col1" class="data row5 col1" >1835</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row5_col2" class="data row5 col2" >   4</td> 
     </tr>    <tr> 
-        <th id="T_d6dd4542_9693_11e8_a154_0050568627a6" class="row_heading level0 row6" >75%</th> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row6_col0" class="data row6 col0" >4476</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row6_col1" class="data row6 col1" >2770</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row6_col2" class="data row6 col2" >   4</td> 
+        <th id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10level0_row6" class="row_heading level0 row6" >75%</th> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row6_col0" class="data row6 col0" >4476</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row6_col1" class="data row6 col1" >2770</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row6_col2" class="data row6 col2" >   4</td> 
     </tr>    <tr> 
-        <th id="T_d6dd4542_9693_11e8_a154_0050568627a6" class="row_heading level0 row7" >max</th> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row7_col0" class="data row7 col0" >6040</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row7_col1" class="data row7 col1" >3952</td> 
-        <td id="T_d6dd4542_9693_11e8_a154_0050568627a6row7_col2" class="data row7 col2" >   5</td> 
+        <th id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10level0_row7" class="row_heading level0 row7" >max</th> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row7_col0" class="data row7 col0" >6040</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row7_col1" class="data row7 col1" >3952</td> 
+        <td id="T_480bc236_9e8f_11e8_9002_2c6e8565ca10row7_col2" class="data row7 col2" >   5</td> 
     </tr></tbody> 
 </table> 
 </div>
@@ -12346,6 +12358,19 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogo_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/dogo_test.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12492,6 +12517,19 @@ of ratings).</code></pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogo_test_users_2_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/dogo_test_set_2_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12551,6 +12589,19 @@ of ratings).</code></pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_lens_data_plus_dogo_train_2_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/all_movie_lens_plus_dogo_users_10_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12569,6 +12620,19 @@ of ratings).</code></pre>
 
 <span class="n">dogo_train_users_10_above_ratings</span> <span class="o">=</span> <span class="n">dogo_train</span><span class="p">[</span><span class="n">dogo_train</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dogo_users_10_above_ratings</span><span class="o">.</span><span class="n">user</span><span class="p">)]</span>
 <span class="n">dogo_test_users_10_above_ratings</span> <span class="o">=</span> <span class="n">dogo_test</span><span class="p">[</span><span class="n">dogo_test</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dogo_users_10_above_ratings</span><span class="o">.</span><span class="n">user</span><span class="p">)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogo_test_users_10_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/dogo_test_set_10_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12635,6 +12699,19 @@ of ratings).</code></pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_lens_data_plus_dogo_train_10_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/all_movie_lens_plus_dogo_users_10_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12653,6 +12730,19 @@ of ratings).</code></pre>
 
 <span class="n">dogo_train_users_20_above_ratings</span> <span class="o">=</span> <span class="n">dogo_train</span><span class="p">[</span><span class="n">dogo_train</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dogo_users_20_above_ratings</span><span class="o">.</span><span class="n">user</span><span class="p">)]</span>
 <span class="n">dogo_test_users_20_above_ratings</span> <span class="o">=</span> <span class="n">dogo_test</span><span class="p">[</span><span class="n">dogo_test</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dogo_users_20_above_ratings</span><span class="o">.</span><span class="n">user</span><span class="p">)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogo_test_users_20_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/dogo_test_set_20_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12715,6 +12805,19 @@ of ratings).</code></pre>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_lens_data_plus_dogo_train_20_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/all_movie_lens_plus_dogo_users_20_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -12792,12 +12895,12 @@ of ratings).</code></pre>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/var/anaconda3/lib/python3.5/site-packages/ipykernel/__main__.py:1: SettingWithCopyWarning: 
+<pre>C:\Users\Oghenemaro Anuyah\AppData\Local\conda\conda\envs\my_root\lib\site-packages\ipykernel_launcher.py:1: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  if __name__ == &#39;__main__&#39;:
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
 </pre>
 </div>
 </div>
@@ -12878,9 +12981,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>3</th>
       <td>4</td>
-      <td>[480, 2366, 1954, 2947, 260, 2692, 2951, 3527,...</td>
+      <td>[2947, 260, 2692, 2951, 3468, 1036, 1954, 1196...</td>
       <td>True</td>
-      <td>[480, 1954, 2947, 260, 1097, 1387, 1196, 1198,...</td>
+      <td>[2947, 260, 1954, 1196, 1198, 1210, 1097, 480,...</td>
     </tr>
     <tr>
       <th>4</th>
@@ -12922,12 +13025,12 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/var/anaconda3/lib/python3.5/site-packages/ipykernel/__main__.py:1: SettingWithCopyWarning: 
+<pre>C:\Users\Oghenemaro Anuyah\AppData\Local\conda\conda\envs\my_root\lib\site-packages\ipykernel_launcher.py:1: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  if __name__ == &#39;__main__&#39;:
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
 </pre>
 </div>
 </div>
@@ -13067,6 +13170,8 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_lens_special_users_plus_dogo_train_2_above_ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">movie_lens_special_users_ratings</span><span class="p">,</span> <span class="n">dogo_train_users_2_above_ratings</span><span class="p">])</span>
 
+<span class="n">movie_lens_special_users_plus_dogo_train_2_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/movie_lens_rated_2_kids_plus_dogo_users_2_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+
 <span class="c1"># Used the same dataset containing Dogo users that rated at least 2 children movies for testing</span>
 </pre></div>
 
@@ -13093,6 +13198,8 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_lens_special_users_plus_dogo_train_10_above_ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">movie_lens_special_users_ratings</span><span class="p">,</span> <span class="n">dogo_train_users_10_above_ratings</span><span class="p">])</span>
+
+<span class="n">movie_lens_special_users_plus_dogo_train_10_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/movie_lens_rated_2_kids_plus_dogo_users_10_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
 
 <span class="c1"># Used the same dataset containing Dogo users that rated at least 10 children movies for testing</span>
 </pre></div>
@@ -13154,6 +13261,8 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_lens_special_users_plus_dogo_train_20_above_ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">movie_lens_special_users_ratings</span><span class="p">,</span> <span class="n">dogo_train_users_20_above_ratings</span><span class="p">])</span>
 
+<span class="n">movie_lens_special_users_plus_dogo_train_20_above_ratings</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/output/movie_lens_rated_2_kids_plus_dogo_users_20_above_ratings.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+
 <span class="c1"># Used the same dataset containing Dogo users that rated at least 20 children movies for testing</span>
 </pre></div>
 
@@ -13194,6 +13303,15 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Note:">Note:<a class="anchor-link" href="#Note:">&#182;</a></h3><p>Check /data/output for all exported datasets</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
