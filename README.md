@@ -4,7 +4,7 @@ This archive contains the scripts to replicate the experiment for our paper ["Ca
 - Java
 - An R, Jupyter, Python, and Tidyverse installation.
 - The [MovieLens 1M](https://grouplens.org/datasets/movielens/) data set, extracted into data/input (should have directory data/ml-1m)
-- The Dogo dataset (or any data set containing ratings provided by children)
+- The Dogo dataset (or any data set containing ratings provided by children) extracted into data/input
 
 ### Instructions
 - Steps to run:
@@ -15,5 +15,8 @@ This archive contains the scripts to replicate the experiment for our paper ["Ca
 - Run Jupyter notebook:
   - Build_datasets_for_experiments/Datasets_creation_notebook.ipynb
   
- - Run LibReC Experiment:
+- Run LibReC Experiment:
   - Evaluation/
+  
+- Visualize user-rating activity:
+  - Rating_Distribution_Dogo_ML1M.ipynb
