@@ -1,4 +1,4 @@
-This folder contains train and test datasets created to run the experiments:
+## This folder contains train and test datasets created to run the experiments:
 
 ### Train sets:
 **all_movie_lens_and_dogo_train_only.csv:** This is a train set that contains all the movieLens data, as well as the remaining 60% of the dogo data. First column is the userID, second column is the itemID, and last column is the rating the user assigned for that item. Number of instances are 1,020,655. Unique number of users are: 14,532, and unique number of items are: 5,327.
