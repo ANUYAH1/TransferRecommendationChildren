@@ -1,4 +1,4 @@
-Steps: 
+## Steps to run this experiment: 
 
 - Import LibRec to a preferred IDE. Link to the process can be found [here](https://mp.weixin.qq.com/s/OyYn5_4GYAbF0L0SFgsHVQ). 
 - Replace named files with data files in: Data/output/file_x. 
