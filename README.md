@@ -3,8 +3,8 @@ This archive contains the scripts to replicate the experiment for our paper ["Ca
 ### Requirements
 - Java
 - An R, Jupyter, Python, and Tidyverse installation.
-- The [MovieLens 1M](https://grouplens.org/datasets/movielens/) data set, extracted into Data/input (should have directory data/ml-1m)
-- The Dogo dataset (or any data set containing ratings provided by children) extracted into Data/input
+- The [MovieLens 1M](https://grouplens.org/datasets/movielens/) dataset, extracted into Data/input (you should have directory Data/ml-1m)
+- The Dogo dataset (or any dataset containing ratings provided by children) extracted into Data/input
 
 ### Instructions
 - Steps to run:
