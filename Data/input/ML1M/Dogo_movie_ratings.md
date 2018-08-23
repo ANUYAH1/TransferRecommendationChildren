@@ -2,4 +2,4 @@ This experiment can be replicated using the MovieLens 1 million dataset, contain
 
 <userID, itemID, ratings>
 
-We are unable to provide the data due to privacy restrictions.
+This dataset can be found [here](https://grouplens.org/datasets/movielens/).
