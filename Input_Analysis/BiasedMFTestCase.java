@@ -50,27 +50,18 @@ public class BiasedMFTestCase extends BaseTestCase {
 	 */
 	@Test
 	public void testRecommender() throws ClassNotFoundException, LibrecException, IOException {
-		String[] location = {"filmtrust/data2", "filmtrust/data4", "filmtrust/data10","filmtrust/data15", "filmtrust/data20", "filmtrust/data35"};
-		String[] testSet =  {"filmtrust/data2/dogo_test_set_2_above_ratings.txt", "filmtrust/data4/dogo_test_set_4_above_ratings.txt", "filmtrust/data10/dogo_test_set_10_above_ratings.txt","filmtrust/data15/dogo_test_set_15_above_ratings.txt", "filmtrust/data20/dogo_test_set_20_above_ratings.txt", "filmtrust/data35/dogo_test_set_35_above_ratings.txt"};
-		for(int y = 0; y < 6; y++) {
-			System.out.println("Testing " + location[y]);
-
-			for (int x = 20; x < 121; x += 20) {
-				conf.set("data.input.path", location[y]);
-				conf.set("data.testset.path", testSet[y]);
-
-				if (x == 100) {
-					x = 120;
-				}
-				System.out.println("Factor number = " + x);
-				Resource resource = new Resource("rec/cf/rating/biasedmf-test.properties");
-				conf.addResource(resource);
-				conf.set("rec.factor.number", Integer.toString(x));
-				RecommenderJob job = new RecommenderJob(conf);
-				job.runJob();
-				conf = new Configuration();
-				System.out.println();
+		for (int x = 20; x < 121; x += 20) {
+			if (x == 100) {
+				x = 120;
 			}
-		}
+			System.out.println("Factor number = " + x);
+			Resource resource = new Resource("rec/cf/rating/biasedmf-test.properties");
+			conf.addResource(resource);
+			conf.set("rec.factor.number", Integer.toString(x));
+			RecommenderJob job = new RecommenderJob(conf);
+			job.runJob();
+			conf = new Configuration();
+			System.out.println();
+		}		
 	}
 }
