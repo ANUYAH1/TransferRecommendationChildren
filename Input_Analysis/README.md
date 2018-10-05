@@ -5,7 +5,7 @@
     
     <b>Note:</b> The .properties file include the files below:
     - data.input.path=filmtrust/rating
-    - data.testset.path=filmtrust/rating/child_test_set.txt
+    - data.testset.path=filmtrust/rating/childrens_data_test_set.txt
 
   The data.input.path is the directory that contains both the training data and test set, while the data.testset.path is a path to the test set.
   
