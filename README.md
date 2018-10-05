@@ -4,13 +4,13 @@ This archive contains the scripts to replicate the experiment for our paper ["Ca
 - Java
 - An R, Jupyter, Python, and Tidyverse installation.
 - The [MovieLens 1M](https://grouplens.org/datasets/movielens/) dataset, extracted into Data/input (you should have directory Data/ml-1m)
-- The Dogo dataset (or any dataset containing ratings provided by children) extracted into Data/input
+- Any dataset containing ratings provided by children extracted into Data/input
 
 ### Instructions
 - Steps to run:
   - Install required software and data files enlisted in <b>requirements</b>. These directories and files should be present upon doing so:
     -Data/input/ml-1m (e.g. data/ml-1m/ratings.dat)
-    -Data/input/Dogo (e.g., any children ratings file)
+    -Data/input/childrens_data (e.g., any children ratings file)
     
 - Run Jupyter notebook:
   - Create_Experimental_Datasets/Data_creation_notebook.ipynb
