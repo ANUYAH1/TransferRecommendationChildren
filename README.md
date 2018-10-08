@@ -19,4 +19,4 @@ This archive contains the scripts to replicate the experiment for our paper ["Ca
   - Input_Analysis/
   
 - Visualize user-rating activity:
-  - Rating_Distribution_Dogo_ML1M.ipynb
+  - Rating_Distribution_in_datasets.ipynb
